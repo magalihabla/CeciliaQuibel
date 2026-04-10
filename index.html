@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CQuibel Propiedades — Belgrano, CABA</title>
+  <meta name="description" content="Cecilia Quibel Negocios Inmobiliarios. 37 años de experiencia en Belgrano, CABA. Venta, alquiler y emprendimientos inmobiliarios con honestidad y transparencia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header class="site-header" id="header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Cecilia Quibel Propiedades">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 624.49" role="img" aria-hidden="true"><polygon fill="#d9f203" points="318.47 106.04 318.47 179.3 173.26 281.26 173.26 484.25 94.78 484.25 68.06 263.85 318.47 106.04"/><polygon fill="#d9f203" points="310.06 264.98 310.06 149.91 464.44 276.23 459.94 483.97 393.01 483.97 397.13 316.74 310.06 264.98"/><circle fill="#d9f203" cx="110.55" cy="149.91" r="49.94"/><text fill="#d9f203" font-size="139.85" font-family="'Funnel Display',system-ui,sans-serif" font-weight="600" transform="translate(547.52 347.09)">Cecilia <tspan x="0" y="136.87">Q</tspan><tspan letter-spacing="0" x="107.22" y="136.87">u</tspan><tspan x="197.77" y="136.87">ibel</tspan></text></svg>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="propiedades.html?op=venta">Venta</a></li>
+        <li><a href="propiedades.html?op=alquiler">Alquiler</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="https://wa.me/541153473533/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web." class="nav-whatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span>11 5347-3533</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-label">Belgrano · CABA · Argentina</p>
+      <h1>Descubrí tu próximo hogar</h1>
+      <p>37 años conectando familias con su lugar ideal. Honestidad, transparencia y compromiso en cada operación.</p>
+      <div class="hero-actions">
+        <a href="propiedades.html?op=venta" class="btn btn-primary">Ver propiedades en venta</a>
+        <a href="propiedades.html?op=alquiler" class="btn btn-outline-light">Alquileres</a>
+      </div>
+    </div>
+
+    <!-- Search box -->
+    <div class="search-box hero-search" style="max-width:680px;">
+      <form id="heroSearchForm">
+        <div class="search-grid">
+          <div class="search-field">
+            <label for="s-op">Operación</label>
+            <select id="s-op" name="op">
+              <option value="">Todas</option>
+              <option value="venta">Venta</option>
+              <option value="alquiler">Alquiler</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="s-type">Tipo de propiedad</label>
+            <select id="s-type" name="type">
+              <option value="">Cualquier tipo</option>
+              <option value="Apartment">Departamento</option>
+              <option value="House">Casa</option>
+              <option value="Office">Oficina</option>
+              <option value="PH">PH</option>
+              <option value="Store">Local</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="s-rooms">Ambientes</label>
+            <select id="s-rooms" name="rooms">
+              <option value="">Cualquier cantidad</option>
+              <option value="1">1 ambiente</option>
+              <option value="2">2 ambientes</option>
+              <option value="3">3 ambientes</option>
+              <option value="4">4+ ambientes</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary btn-full" style="height:100%;min-height:42px;">Buscar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PROPERTIES ─────────────────────────────────── -->
+<section class="section" id="featuredSection">
+  <div class="container">
+    <p class="section-label">Propiedades destacadas</p>
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:32px; flex-wrap:wrap; gap:16px;">
+      <h2 class="section-title" style="margin-bottom:0;">Lo más reciente</h2>
+      <div class="op-tabs" id="featuredTabs">
+        <button class="op-tab active" data-op="all">Todas</button>
+        <button class="op-tab" data-op="Sale">Venta</button>
+        <button class="op-tab" data-op="Rent">Alquiler</button>
+      </div>
+    </div>
+    <div class="properties-grid loading-grid" id="featuredGrid"></div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="propiedades.html" class="btn btn-outline" id="viewAllBtn">Ver todas las propiedades</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="about-section">
+      <div class="about-image">
+        <img src="img/equipo.jpg"
+             alt="Equipo Cecilia Quibel Propiedades"
+             style="width:100%; height:100%; object-fit:cover; object-position:center 35%;" />
+      </div>
+      <div class="about-text">
+        <p class="section-label">Quiénes somos</p>
+        <h2>Más de tres décadas<br>construyendo confianza</h2>
+        <p>Somos una inmobiliaria familiar con sede en Belgrano, CABA. Desde 1987 acompañamos a familias, empresas y embajadas en la compra, venta y alquiler de propiedades en Capital Federal y alrededores.</p>
+        <p>Nuestra diferencia está en el trato personalizado: conocemos cada propiedad, cada barrio y a cada cliente. Honestidad, transparencia y responsabilidad no son solo palabras — son nuestra forma de trabajar.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <strong>37+</strong>
+            <span>años de experiencia</span>
+          </div>
+          <div class="stat-item">
+            <strong>CUCICBA</strong>
+            <span>MP. 2278</span>
+          </div>
+          <div class="stat-item">
+            <strong>100%</strong>
+            <span>compromiso</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn btn-primary">Contactanos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST / CLIENTS ──────────────────────────────────────── -->
+<section class="section section-sm trust-section">
+  <div class="container text-center">
+    <p class="section-label">Clientes que confían en nosotros</p>
+    <h2 style="margin-bottom:8px;">Respaldo en cada operación</h2>
+    <p class="text-muted" style="margin: 0 auto 40px;">Empresas, embajadas y familias que eligieron nuestra experiencia.</p>
+    <div class="trust-grid">
+      <div class="trust-item">Embajada de Italia</div>
+      <div class="trust-item">Embajada de España</div>
+      <div class="trust-item">Embajada de Francia</div>
+      <div class="trust-item">Empresas multinacionales</div>
+      <div class="trust-item">Familias de CABA</div>
+      <div class="trust-item">nb&a arquitectura</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ──────────────────────────────────────────────── -->
+<section class="section contact-section" id="contacto">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <p class="section-label">Contacto</p>
+        <h2>¿En qué podemos<br>ayudarte?</h2>
+        <p>Escribinos o llamanos. Te respondemos a la brevedad y sin compromiso.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Dirección</strong>
+              Juramento 2892, Belgrano, CABA
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Teléfono / WhatsApp</strong>
+              +54 11 5347-3533
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              cquibel.propiedades@gmail.com
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Horarios de atención</strong>
+              Lun–Vie: 10:00–15:00 · Sáb: 10:00–13:00
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="https://wa.me/541153473533/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web." target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Escribinos por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-box">
+        <h3 style="margin-bottom:24px;">Enviar consulta</h3>
+        <form class="contact-form" data-action="https://formspree.io/f/REPLACE_ME">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="c-name">Nombre completo *</label>
+              <input type="text" id="c-name" name="name" required placeholder="Tu nombre" />
+            </div>
+            <div class="form-field">
+              <label for="c-email">Email *</label>
+              <input type="email" id="c-email" name="email" required placeholder="tu@email.com" />
+            </div>
+            <div class="form-field">
+              <label for="c-phone">Teléfono</label>
+              <input type="tel" id="c-phone" name="phone" placeholder="+54 11 ..." />
+            </div>
+            <div class="form-field">
+              <label for="c-interest">Me interesa</label>
+              <select id="c-interest" name="property">
+                <option value="">Seleccionar...</option>
+                <option>Comprar una propiedad</option>
+                <option>Alquilar una propiedad</option>
+                <option>Vender / tasar mi propiedad</option>
+                <option>Emprendimientos</option>
+                <option>Otra consulta</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="c-msg">Mensaje *</label>
+              <textarea id="c-msg" name="message" required placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+          </div>
+          <p class="form-note">* Campos obligatorios. Tu información es confidencial y no será compartida.</p>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:16px;">Enviar consulta</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTAGRAM ─────────────────────────────────────────────── -->
+<section class="instagram-section">
+  <div class="container">
+    <div class="instagram-header">
+      <div class="instagram-brand">
+        <div class="ig-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <div>
+          <p class="ig-handle">@cquibel.propiedades</p>
+          <p class="ig-sub">Seguinos para ver las últimas novedades</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="btn btn-ig">
+        Seguir en Instagram
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="ig-embed-posts">
+      <div class="ig-embed-post">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DVwjW42kUec/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);margin:0;max-width:100%;min-width:280px;padding:0;width:100%;"></blockquote>
+      </div>
+      <div class="ig-embed-post">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DWKS-mgiHYH/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);margin:0;max-width:100%;min-width:280px;padding:0;width:100%;"></blockquote>
+      </div>
+      <div class="ig-embed-post">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DWWefNsDmqU/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);margin:0;max-width:100%;min-width:280px;padding:0;width:100%;"></blockquote>
+      </div>
+    </div>
+    <script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="footer-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 624.49" aria-label="Cecilia Quibel Propiedades"><polygon fill="#d9f203" points="318.47 106.04 318.47 179.3 173.26 281.26 173.26 484.25 94.78 484.25 68.06 263.85 318.47 106.04"/><polygon fill="#d9f203" points="310.06 264.98 310.06 149.91 464.44 276.23 459.94 483.97 393.01 483.97 397.13 316.74 310.06 264.98"/><circle fill="#d9f203" cx="110.55" cy="149.91" r="49.94"/><text fill="#d9f203" font-size="139.85" font-family="'Funnel Display',system-ui,sans-serif" font-weight="600" transform="translate(547.52 347.09)">Cecilia <tspan x="0" y="136.87">Q</tspan><tspan letter-spacing="0" x="107.22" y="136.87">u</tspan><tspan x="197.77" y="136.87">ibel</tspan></text></svg>
+        <p>Cecilia Quibel Negocios Inmobiliarios.<br>Juramento 2892, Belgrano, CABA.<br>CUCICBA · MP. 2278</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/541153473533" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Propiedades</h4>
+        <ul>
+          <li><a href="propiedades.html?op=venta">En Venta</a></li>
+          <li><a href="propiedades.html?op=alquiler">En Alquiler</a></li>
+          <li><a href="propiedades.html">Todas las propiedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="https://www.instagram.com/cquibel.propiedades/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+541153473533">+54 11 5347-3533</a></li>
+          <li><a href="mailto:cquibel.propiedades@gmail.com">cquibel.propiedades@gmail.com</a></li>
+          <li><a href="https://wa.me/541153473533" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 CQuibel Propiedades · Cecilia Quibel Negocios Inmobiliarios</span>
+      <a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank" rel="noopener">Protección de datos personales</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLOAT ────────────────────────────────────────── -->
+<a href="https://wa.me/541153473533/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web."
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+</a>
+
+<script src="js/tokko.js"></script>
+<script src="js/main.js"></script>
+<script>
+// ── Hero background: load first property photo ──
+TOKKO.getProperties({ limit: 6 }).then(data => {
+  // Set hero background from first property with photo
+  const withPhoto = data.objects.find(p => p.photos && p.photos.length > 0);
+  if (withPhoto) {
+    document.getElementById('heroBg').style.backgroundImage = `url('${withPhoto.photos[0].image}')`;
+  }
+  renderFeatured(data.objects, 'all');
+}).catch(console.error);
+
+
+let allFeatured = [];
+function renderFeatured(props, op) {
+  allFeatured = props;
+  const grid = document.getElementById('featuredGrid');
+  const filtered = op === 'all' ? props : props.filter(p => TOKKO.getOperationType(p) === op);
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty-state"><p>No hay propiedades disponibles.</p></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.slice(0, 6).map(buildPropertyCard).join('');
+}
+
+document.getElementById('featuredTabs').addEventListener('click', e => {
+  const btn = e.target.closest('.op-tab');
+  if (!btn) return;
+  document.querySelectorAll('#featuredTabs .op-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderFeatured(allFeatured, btn.dataset.op);
+});
+
+// Hero search
+document.getElementById('heroSearchForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const op    = document.getElementById('s-op').value;
+  const type  = document.getElementById('s-type').value;
+  const rooms = document.getElementById('s-rooms').value;
+  const params = new URLSearchParams();
+  if (op)    params.set('op', op);
+  if (type)  params.set('type', type);
+  if (rooms) params.set('rooms', rooms);
+  window.location = `propiedades.html?${params}`;
+});
+
+// Skeleton while loading
+renderSkeletons(document.getElementById('featuredGrid'), 6);
+</script>
+</body>
+</html>
