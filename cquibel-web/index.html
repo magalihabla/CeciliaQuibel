@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CQuibel Propiedades — CABA</title>
+  <meta name="description" content="Cecilia Quibel Negocios Inmobiliarios. 40 años de experiencia en CABA. Venta y alquiler de propiedades con honestidad, transparencia y atención real." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header class="site-header" id="header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Cecilia Quibel Propiedades">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 624.49" role="img" aria-hidden="true"><polygon fill="#d9f203" points="318.47 106.04 318.47 179.3 173.26 281.26 173.26 484.25 94.78 484.25 68.06 263.85 318.47 106.04"/><polygon fill="#d9f203" points="310.06 264.98 310.06 149.91 464.44 276.23 459.94 483.97 393.01 483.97 397.13 316.74 310.06 264.98"/><circle fill="#d9f203" cx="110.55" cy="149.91" r="49.94"/><text fill="#d9f203" font-size="139.85" font-family="'Funnel Display',system-ui,sans-serif" font-weight="600" transform="translate(547.52 347.09)">Cecilia <tspan x="0" y="136.87">Q</tspan><tspan letter-spacing="0" x="107.22" y="136.87">u</tspan><tspan x="197.77" y="136.87">ibel</tspan></text></svg>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="propiedades.html?op=venta">Venta</a></li>
+        <li><a href="propiedades.html?op=alquiler">Alquiler</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="https://wa.me/541138328187/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web." class="nav-whatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span>11 3832-8187</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-label">Cecilia Quibel · Negocios Inmobiliarios · CABA</p>
+      <h1>Tu próxima propiedad, sin vueltas</h1>
+      <p>Atención real, respuesta inmediata y 40 años conociendo el mercado de CABA.</p>
+      <div class="hero-actions">
+        <a href="propiedades.html?op=venta" class="btn btn-primary">Ver propiedades en venta</a>
+        <a href="propiedades.html?op=alquiler" class="btn btn-outline-light">Ver alquileres</a>
+      </div>
+    </div>
+
+    <!-- Search box -->
+    <div class="search-box hero-search" style="max-width:860px;">
+      <form id="heroSearchForm">
+        <div class="search-grid">
+          <div class="search-field">
+            <label for="s-op">Operación</label>
+            <select id="s-op" name="op">
+              <option value="">Todas</option>
+              <option value="venta">Venta</option>
+              <option value="alquiler">Alquiler</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="s-type">Tipo de propiedad</label>
+            <select id="s-type" name="type">
+              <option value="">Cualquier tipo</option>
+              <option value="Apartment">Departamento</option>
+              <option value="House">Casa</option>
+              <option value="Office">Oficina</option>
+              <option value="PH">PH</option>
+              <option value="Store">Local</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="s-rooms">Ambientes</label>
+            <select id="s-rooms" name="rooms">
+              <option value="">Cualquier cantidad</option>
+              <option value="1">1 ambiente</option>
+              <option value="2">2 ambientes</option>
+              <option value="3">3 ambientes</option>
+              <option value="4">4+ ambientes</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary btn-full" style="height:100%;min-height:42px;">Buscar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PROPERTIES ─────────────────────────────────── -->
+<section class="section" id="featuredSection">
+  <div class="container">
+    <p class="section-label">Propiedades disponibles</p>
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:32px; flex-wrap:wrap; gap:16px;">
+      <h2 class="section-title" style="margin-bottom:0;">Las mejores propiedades disponibles.</h2>
+      <div class="op-tabs" id="featuredTabs">
+        <button class="op-tab active" data-op="all">Todas</button>
+        <button class="op-tab" data-op="Sale">Venta</button>
+        <button class="op-tab" data-op="Rent">Alquiler</button>
+      </div>
+    </div>
+    <div class="properties-grid loading-grid" id="featuredGrid"></div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="propiedades.html" class="btn btn-outline" id="viewAllBtn">Ver todas las propiedades</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="about-section">
+      <div class="about-image">
+        <img src="img/equipo.jpg"
+             alt="Equipo Cecilia Quibel Propiedades"
+             style="width:100%; height:100%; object-fit:cover; object-position:center 35%;" />
+      </div>
+      <div class="about-text">
+        <p class="section-label">Quiénes somos</p>
+        <h2>Experiencia en movimiento</h2>
+        <p>Sabemos que comprar o alquilar es un proceso que hacés pocas veces en la vida y está lleno de imprevistos. En Cecilia Quibel Propiedades, nuestro trabajo es que vos solo te ocupes de disfrutar.</p>
+        <p>¿Cómo lo hacemos? Con nuestro <strong>Blend Perfecto</strong>: 40 años de trayectoria y honestidad pura, y 20 años de cultura ágil y resolución creativa.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <strong>40+</strong>
+            <span>años de experiencia</span>
+          </div>
+          <div class="stat-item">
+            <strong>CUCICBA</strong>
+            <span>MP. 2278</span>
+          </div>
+          <div class="stat-item">
+            <strong>100%</strong>
+            <span>compromiso</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn btn-primary">Contactanos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ──────────────────────────────────────── -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <h2>Testimonios</h2>
+      <p class="section-label" style="margin-top:8px;">Lo que dicen nuestros clientes</p>
+    </div>
+    <div class="testi-wrapper">
+      <button class="testi-arrow" id="testiPrev" aria-label="Testimonio anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="testi-clip">
+        <div class="testi-track" id="testiTrack">
+
+          <!-- TESTIMONIO 1 — reemplazar foto, texto y link de Instagram -->
+          <div class="testi-card">
+            <div class="testi-photo">
+              <img src="img/testimonios/cliente-1.jpg" alt="María González"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <blockquote class="testi-quote">Cecilia me acompañó en todo el proceso de compra. Su honestidad y conocimiento del mercado fueron clave. Nunca me prometió algo que no podía cumplir.</blockquote>
+            <div class="testi-author">
+              <strong>María González</strong>
+              <span>Compradora · CABA</span>
+            </div>
+            <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="testi-ig-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Ver en Instagram
+            </a>
+          </div>
+
+          <!-- TESTIMONIO 2 -->
+          <div class="testi-card">
+            <div class="testi-photo">
+              <img src="img/testimonios/cliente-2.jpg" alt="Roberto Fernández"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <blockquote class="testi-quote">Después de meses buscando sin resultado, Cecilia cerró mi alquiler en dos semanas. Respuesta inmediata, siempre disponible y sin vueltas.</blockquote>
+            <div class="testi-author">
+              <strong>Roberto Fernández</strong>
+              <span>Inquilino · Belgrano</span>
+            </div>
+            <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="testi-ig-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Ver en Instagram
+            </a>
+          </div>
+
+          <!-- TESTIMONIO 3 -->
+          <div class="testi-card">
+            <div class="testi-photo">
+              <img src="img/testimonios/cliente-3.jpg" alt="Laura Méndez"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <blockquote class="testi-quote">Tasó mi propiedad con un criterio que ninguna otra inmobiliaria tuvo. Se vendió al precio exacto que estimó, en menos de un mes.</blockquote>
+            <div class="testi-author">
+              <strong>Laura Méndez</strong>
+              <span>Vendedora · Núñez</span>
+            </div>
+            <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="testi-ig-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Ver en Instagram
+            </a>
+          </div>
+
+          <!-- TESTIMONIO 4 -->
+          <div class="testi-card">
+            <div class="testi-photo">
+              <img src="img/testimonios/cliente-4.jpg" alt="Carlos & Ana Torres"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <blockquote class="testi-quote">La mejor decisión fue confiarle la venta de nuestro departamento. Trato personalizado, sin vueltas y acompañamiento real desde el primer día.</blockquote>
+            <div class="testi-author">
+              <strong>Carlos & Ana Torres</strong>
+              <span>Vendedores · Palermo</span>
+            </div>
+            <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="testi-ig-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Ver en Instagram
+            </a>
+          </div>
+
+          <!-- TESTIMONIO 5 -->
+          <div class="testi-card">
+            <div class="testi-photo">
+              <img src="img/testimonios/cliente-5.jpg" alt="Embajada de Italia"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <blockquote class="testi-quote">Trabajamos con Cecilia hace más de 10 años. Profesionalismo, discreción y resultados concretos en cada operación. Confianza total.</blockquote>
+            <div class="testi-author">
+              <strong>Embajada de Italia</strong>
+              <span>Cliente corporativo · CABA</span>
+            </div>
+            <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="testi-ig-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Ver en Instagram
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <button class="testi-arrow" id="testiNext" aria-label="Testimonio siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- ── CONTACT ──────────────────────────────────────────────── -->
+<section class="section contact-section" id="contacto">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <p class="section-label">Contacto</p>
+        <h2>Hablemos<br>sin vueltas</h2>
+        <p>Contanos qué necesitás y te orientamos honestamente.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Teléfono / WhatsApp</strong>
+              +54 11 3832-8187
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              cquibel.propiedades@gmail.com
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-item-text">
+              <strong>Horarios de atención</strong>
+              Todos los días, 24/7
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="https://wa.me/541138328187/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web." target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Escribinos por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-box">
+        <h3 style="margin-bottom:24px;">Enviar consulta</h3>
+        <form class="contact-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="c-name">Nombre completo *</label>
+              <input type="text" id="c-name" name="name" required placeholder="Tu nombre" oninput="this.value=this.value.replace(/[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑàèìòùÀÈÌÒÙâêîôûÂÊÎÔÛäëïöÄËÏÖçÇ'\s]/g,'')" />
+            </div>
+            <div class="form-field">
+              <label for="c-email">Email *</label>
+              <input type="email" id="c-email" name="email" required placeholder="tu@email.com" oninput="this.value=this.value.replace(/[^a-zA-Z0-9@.\-_+]/g,'')" />
+            </div>
+            <div class="form-field">
+              <label for="c-phone">Celular</label>
+              <input type="tel" id="c-phone" name="phone" placeholder="+54 11 ..." inputmode="numeric" pattern="[0-9\s\+\-\(\)]*" oninput="this.value=this.value.replace(/[^0-9\s\+\-\(\)]/g,'')" />
+            </div>
+            <div class="form-field">
+              <label for="c-interest">Me interesa</label>
+              <select id="c-interest" name="interest">
+                <option value="">Seleccionar...</option>
+                <option>Comprar una propiedad</option>
+                <option>Alquilar una propiedad</option>
+                <option>Tasar mi propiedad</option>
+                <option>Consulta general</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="c-msg">Mensaje *</label>
+              <textarea id="c-msg" name="message" required placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+          </div>
+          <input type="text" name="_hp" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-note">* Campos obligatorios. Tu información es confidencial y no será compartida.</p>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:16px;">Enviar consulta</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REDES SOCIALES ─────────────────────────────────────────── -->
+<section class="instagram-section">
+  <div class="container">
+    <p class="section-label" style="color:var(--color-accent); margin-bottom:32px;">Seguinos en redes</p>
+    <div class="social-platforms">
+
+      <div class="social-platform-card">
+        <div class="instagram-brand">
+          <div class="ig-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div>
+            <p class="ig-handle">@cquibel.propiedades</p>
+            <p class="ig-sub">Instagram</p>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" class="btn btn-ig btn-ig--outline">
+          Seguir
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="social-platform-card">
+        <div class="instagram-brand">
+          <div class="ig-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.22 8.22 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          </div>
+          <div>
+            <p class="ig-handle">@cquibel.prop</p>
+            <p class="ig-sub">TikTok</p>
+          </div>
+        </div>
+        <a href="https://www.tiktok.com/@cquibel.prop" target="_blank" rel="noopener" class="btn btn-ig btn-ig--outline">
+          Seguir
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="social-platform-card">
+        <div class="instagram-brand">
+          <div class="ig-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-1.9-1.2-2.7c-1.1-1.2-2.4-1.2-3-1.3C15.9 2.8 12 2.8 12 2.8s-3.9 0-6.8.2c-.6.1-1.9.1-3 1.3C1.3 5.1 1 7 1 7S.7 9 .7 11v1.9C.7 15 1 17 1 17s.3 1.9 1.2 2.7c1.1 1.2 2.6 1.1 3.3 1.2C7.2 21.1 12 21.1 12 21.1s3.9 0 6.8-.3c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.7 1.2-2.7s.3-2 .3-4v-1.9C23.3 9 23 7 23 7zm-13.3 7.8V9.2l5.9 2.8-5.9 2.8z"/></svg>
+          </div>
+          <div>
+            <p class="ig-handle">@cquibel.propiedades</p>
+            <p class="ig-sub">YouTube</p>
+          </div>
+        </div>
+        <a href="https://www.youtube.com/@cquibel.propiedades" target="_blank" rel="noopener" class="btn btn-ig btn-ig--outline">
+          Suscribirse
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="ig-embed-posts">
+      <div class="ig-embed-post">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DVwjW42kUec/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);margin:0;max-width:100%;min-width:280px;padding:0;width:100%;"></blockquote>
+      </div>
+      <div class="ig-embed-post">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DWKS-mgiHYH/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);margin:0;max-width:100%;min-width:280px;padding:0;width:100%;"></blockquote>
+      </div>
+      <div class="ig-embed-post">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DWWefNsDmqU/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);margin:0;max-width:100%;min-width:280px;padding:0;width:100%;"></blockquote>
+      </div>
+    </div>
+    <script async src="//www.instagram.com/embed.js"></script>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="footer-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 624.49" aria-label="Cecilia Quibel Propiedades"><polygon fill="#d9f203" points="318.47 106.04 318.47 179.3 173.26 281.26 173.26 484.25 94.78 484.25 68.06 263.85 318.47 106.04"/><polygon fill="#d9f203" points="310.06 264.98 310.06 149.91 464.44 276.23 459.94 483.97 393.01 483.97 397.13 316.74 310.06 264.98"/><circle fill="#d9f203" cx="110.55" cy="149.91" r="49.94"/><text fill="#d9f203" font-size="139.85" font-family="'Funnel Display',system-ui,sans-serif" font-weight="600" transform="translate(547.52 347.09)">Cecilia <tspan x="0" y="136.87">Q</tspan><tspan letter-spacing="0" x="107.22" y="136.87">u</tspan><tspan x="197.77" y="136.87">ibel</tspan></text></svg>
+        <p>Cecilia Quibel Negocios Inmobiliarios.<br>CUCICBA · MP. 2278</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/cquibel.propiedades/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@cquibel.prop" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.22 8.22 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@cquibel.propiedades" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-1.9-1.2-2.7c-1.1-1.2-2.4-1.2-3-1.3C15.9 2.8 12 2.8 12 2.8s-3.9 0-6.8.2c-.6.1-1.9.1-3 1.3C1.3 5.1 1 7 1 7S.7 9 .7 11v1.9C.7 15 1 17 1 17s.3 1.9 1.2 2.7c1.1 1.2 2.6 1.1 3.3 1.2C7.2 21.1 12 21.1 12 21.1s3.9 0 6.8-.3c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.7 1.2-2.7s.3-2 .3-4v-1.9C23.3 9 23 7 23 7zm-13.3 7.8V9.2l5.9 2.8-5.9 2.8z"/></svg>
+          </a>
+          <a href="https://inmuebles.mercadolibre.com.ar/_CustId_129886697" target="_blank" rel="noopener" aria-label="MercadoLibre">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+          </a>
+          <a href="https://www.zonaprop.com.ar/inmobiliarias/cecilia-quibel-negocios-inmobiliarios_17032850-inmuebles.html" target="_blank" rel="noopener" aria-label="ZonaProp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          </a>
+          <a href="https://wa.me/541138328187" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Propiedades</h4>
+        <ul>
+          <li><a href="propiedades.html?op=venta">En Venta</a></li>
+          <li><a href="propiedades.html?op=alquiler">En Alquiler</a></li>
+          <li><a href="propiedades.html">Todas las propiedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="https://www.instagram.com/cquibel.propiedades/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+541138328187">+54 11 3832-8187</a></li>
+          <li><a href="mailto:cquibel.propiedades@gmail.com">cquibel.propiedades@gmail.com</a></li>
+          <li><a href="https://wa.me/541138328187" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CQuibel Propiedades · Cecilia Quibel Negocios Inmobiliarios</span>
+      <a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank" rel="noopener">Protección de datos personales</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLOAT ────────────────────────────────────────── -->
+<a href="https://wa.me/541138328187/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web."
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+</a>
+
+<script src="js/tokko.js"></script>
+<script src="js/main.js"></script>
+<script>
+// ── Testimonials Carousel ──────────────────────────────────
+(function () {
+  const GAP = 24;
+  const track   = document.getElementById('testiTrack');
+  const dotsEl  = document.getElementById('testiDots');
+  const prevBtn = document.getElementById('testiPrev');
+  const nextBtn = document.getElementById('testiNext');
+  if (!track) return;
+  const cards = Array.from(track.querySelectorAll('.testi-card'));
+  const total = cards.length;
+  let current = 0, perView = 3, cardW = 0, autoTimer = null;
+
+  function getPerView() {
+    return window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+  }
+
+  function maxIdx() { return Math.max(0, total - perView); }
+
+  function goTo(idx, animate) {
+    if (animate === false) {
+      track.style.transition = 'none';
+      requestAnimationFrame(() => { track.style.transition = ''; });
+    }
+    current = Math.min(Math.max(0, idx), maxIdx());
+    track.style.transform = 'translateX(-' + (current * (cardW + GAP)) + 'px)';
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= maxIdx();
+    updateDots();
+  }
+
+  function renderDots() {
+    dotsEl.innerHTML = '';
+    for (let i = 0; i <= maxIdx(); i++) {
+      const d = document.createElement('button');
+      d.className = 'testi-dot' + (i === current ? ' active' : '');
+      d.setAttribute('aria-label', 'Ir al testimonio ' + (i + 1));
+      d.addEventListener('click', function () { goTo(i); resetAuto(); });
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function updateDots() {
+    dotsEl.querySelectorAll('.testi-dot').forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function resize() {
+    perView = getPerView();
+    const clipW = track.parentElement.clientWidth;
+    cardW = (clipW - GAP * (perView - 1)) / perView;
+    cards.forEach(function (c) { c.style.width = cardW + 'px'; });
+    renderDots();
+    goTo(current, false);
+  }
+
+  function next() {
+    goTo(current >= maxIdx() ? 0 : current + 1);
+  }
+
+  function startAuto() { autoTimer = setInterval(next, 5000); }
+  function resetAuto() { clearInterval(autoTimer); startAuto(); }
+
+  prevBtn.addEventListener('click', function () { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener('click', function () { goTo(current + 1); resetAuto(); });
+
+  window.addEventListener('resize', resize);
+  resize();
+  startAuto();
+})();
+</script>
+<script>
+// ── Hero background: load first property photo ──
+TOKKO.getProperties({ limit: 6 }).then(data => {
+  // Set hero background from first property with photo
+  const withPhoto = data.objects.find(p => p.photos && p.photos.length > 0);
+  if (withPhoto) {
+    document.getElementById('heroBg').style.backgroundImage = `url('${withPhoto.photos[0].image}')`;
+  }
+  renderFeatured(data.objects, 'all');
+}).catch(console.error);
+
+
+let allFeatured = [];
+function renderFeatured(props, op) {
+  allFeatured = props;
+  const grid = document.getElementById('featuredGrid');
+  const filtered = op === 'all' ? props : props.filter(p => TOKKO.getOperationType(p) === op);
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty-state"><p>No hay propiedades disponibles.</p></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.slice(0, 6).map(buildPropertyCard).join('');
+}
+
+document.getElementById('featuredTabs').addEventListener('click', e => {
+  const btn = e.target.closest('.op-tab');
+  if (!btn) return;
+  document.querySelectorAll('#featuredTabs .op-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderFeatured(allFeatured, btn.dataset.op);
+});
+
+// Hero search
+document.getElementById('heroSearchForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const op    = document.getElementById('s-op').value;
+  const type  = document.getElementById('s-type').value;
+  const rooms = document.getElementById('s-rooms').value;
+  const params = new URLSearchParams();
+  if (op)    params.set('op', op);
+  if (type)  params.set('type', type);
+  if (rooms) params.set('rooms', rooms);
+  window.location = `propiedades.html?${params}`;
+});
+
+// Skeleton while loading
+renderSkeletons(document.getElementById('featuredGrid'), 6);
+</script>
+</body>
+</html>

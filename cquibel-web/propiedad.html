@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propiedad — CQuibel Propiedades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Cecilia Quibel Propiedades"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 624.49" role="img" aria-hidden="true"><polygon fill="#d9f203" points="318.47 106.04 318.47 179.3 173.26 281.26 173.26 484.25 94.78 484.25 68.06 263.85 318.47 106.04"/><polygon fill="#d9f203" points="310.06 264.98 310.06 149.91 464.44 276.23 459.94 483.97 393.01 483.97 397.13 316.74 310.06 264.98"/><circle fill="#d9f203" cx="110.55" cy="149.91" r="49.94"/><text fill="#d9f203" font-size="139.85" font-family="'Funnel Display',system-ui,sans-serif" font-weight="600" transform="translate(547.52 347.09)">Cecilia <tspan x="0" y="136.87">Q</tspan><tspan letter-spacing="0" x="107.22" y="136.87">u</tspan><tspan x="197.77" y="136.87">ibel</tspan></text></svg></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="propiedades.html?op=venta">Venta</a></li>
+        <li><a href="propiedades.html?op=alquiler">Alquiler</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://wa.me/541153473533/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web." class="nav-whatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+          <span>11 5347-3533</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div style="background:var(--color-bg-alt); border-bottom:1px solid var(--color-border); padding:12px 0;">
+  <div class="container">
+    <nav style="font-size:0.78rem; color:var(--color-text-muted); display:flex; gap:8px; align-items:center;">
+      <a href="index.html" style="color:var(--color-text-muted);">Inicio</a>
+      <span>›</span>
+      <a href="propiedades.html" style="color:var(--color-text-muted);" id="breadcrumbOp">Propiedades</a>
+      <span>›</span>
+      <span id="breadcrumbTitle" style="color:var(--color-text);">Cargando...</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ── DETAIL CONTENT ───────────────────────────────────────── -->
+<main class="section" id="detailMain">
+  <div class="container">
+    <div id="loadingState">
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:40px;">
+        <div>
+          <div class="skeleton" style="aspect-ratio:16/9;margin-bottom:32px;"></div>
+          <div class="skeleton-body" style="padding:0;">
+            <div class="skeleton-line" style="height:32px;margin-bottom:16px;"></div>
+            <div class="skeleton-line medium"></div>
+            <div class="skeleton-line short"></div>
+          </div>
+        </div>
+        <div class="skeleton" style="height:320px;"></div>
+      </div>
+    </div>
+    <div id="detailContent" style="display:none;"></div>
+    <div id="errorState" style="display:none;" class="empty-state">
+      <h3>Propiedad no encontrada</h3>
+      <p>La propiedad que buscás no está disponible.</p>
+      <a href="propiedades.html" class="btn btn-primary" style="margin-top:16px;">Ver todas las propiedades</a>
+    </div>
+  </div>
+</main>
+
+<!-- Related -->
+<section class="section section-sm" style="background:var(--color-bg-alt);" id="relatedSection" style="display:none;">
+  <div class="container">
+    <h3 style="margin-bottom:28px;">Otras propiedades que podrían interesarte</h3>
+    <div class="properties-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="footer-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 624.49" aria-label="Cecilia Quibel Propiedades"><polygon fill="#d9f203" points="318.47 106.04 318.47 179.3 173.26 281.26 173.26 484.25 94.78 484.25 68.06 263.85 318.47 106.04"/><polygon fill="#d9f203" points="310.06 264.98 310.06 149.91 464.44 276.23 459.94 483.97 393.01 483.97 397.13 316.74 310.06 264.98"/><circle fill="#d9f203" cx="110.55" cy="149.91" r="49.94"/><text fill="#d9f203" font-size="139.85" font-family="'Funnel Display',system-ui,sans-serif" font-weight="600" transform="translate(547.52 347.09)">Cecilia <tspan x="0" y="136.87">Q</tspan><tspan letter-spacing="0" x="107.22" y="136.87">u</tspan><tspan x="197.77" y="136.87">ibel</tspan></text></svg>
+        <p>Cecilia Quibel Negocios Inmobiliarios.<br>Juramento 2892, Belgrano, CABA.<br>CUCICBA · MP. 2278</p>
+      </div>
+      <div class="footer-col">
+        <h4>Propiedades</h4>
+        <ul>
+          <li><a href="propiedades.html?op=venta">En Venta</a></li>
+          <li><a href="propiedades.html?op=alquiler">En Alquiler</a></li>
+          <li><a href="propiedades.html">Todas las propiedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="https://www.instagram.com/cquibel.propiedades/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+541153473533">+54 11 5347-3533</a></li>
+          <li><a href="mailto:cquibel.propiedades@gmail.com">Email</a></li>
+          <li><a href="https://wa.me/541153473533" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 CQuibel Propiedades · Cecilia Quibel Negocios Inmobiliarios</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">×</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<a href="https://wa.me/541153473533/?text=Hola%20Cecilia!%20Los%20contacto%20desde%20su%20web." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+</a>
+
+<script src="js/tokko.js"></script>
+<script src="js/main.js"></script>
+<script>
+const propId = new URLSearchParams(window.location.search).get('id');
+if (!propId) {
+  showError();
+} else {
+  loadProperty(propId);
+}
+
+async function loadProperty(id) {
+  try {
+    const prop = await TOKKO.getProperty(id);
+    renderDetail(prop);
+    loadRelated(prop);
+  } catch (e) {
+    showError();
+  }
+}
+
+function showError() {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('errorState').style.display  = 'block';
+}
+
+function renderDetail(prop) {
+  document.getElementById('loadingState').style.display = 'none';
+  const content = document.getElementById('detailContent');
+  content.style.display = 'block';
+
+  const opType  = TOKKO.getOperationType(prop);
+  const price   = TOKKO.formatPrice(prop);
+  const priceObj= TOKKO.getPrice(prop);
+  const location= TOKKO.getLocation(prop);
+  const photos  = prop.photos || [];
+  const breadOp = opType === 'Sale' ? 'Venta' : opType === 'Rent' ? 'Alquiler' : 'Propiedades';
+  const breadLink= opType === 'Sale' ? 'propiedades.html?op=venta' : opType === 'Rent' ? 'propiedades.html?op=alquiler' : 'propiedades.html';
+
+  document.getElementById('breadcrumbOp').textContent = breadOp;
+  document.getElementById('breadcrumbOp').href = breadLink;
+  document.getElementById('breadcrumbTitle').textContent = prop.publication_title || prop.address;
+  document.title = `${prop.publication_title || prop.address} — CQuibel Propiedades`;
+
+  // Gallery — carousel
+  const galleryHtml = photos.length > 0 ? `
+    <div class="detail-carousel" id="detailCarousel" data-index="0">
+      <div class="detail-carousel-track" id="detailCarouselTrack">
+        ${photos.map((p, i) => `
+          <div class="detail-carousel-slide" onclick="openLightbox(${i})">
+            <img src="${p.image}" alt="${prop.publication_title}" ${i > 0 ? 'loading="lazy"' : ''} />
+          </div>
+        `).join('')}
+      </div>
+      ${photos.length > 1 ? `
+        <button class="detail-carousel-btn detail-carousel-prev" onclick="detailCarouselMove(-1)" aria-label="Anterior">&#8249;</button>
+        <button class="detail-carousel-btn detail-carousel-next" onclick="detailCarouselMove(1)" aria-label="Siguiente">&#8250;</button>
+        <div class="detail-carousel-counter"><span id="dcCounter">1</span> / ${photos.length}</div>
+        <div class="detail-carousel-thumbs" id="detailThumbs">
+          ${photos.map((p, i) => `
+            <button class="detail-thumb${i === 0 ? ' active' : ''}" onclick="detailCarouselGoTo(${i})">
+              <img src="${p.image}" alt="" loading="lazy" />
+            </button>
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  ` : `<div style="aspect-ratio:16/9;background:var(--color-bg-alt);border-radius:var(--radius-md);margin-bottom:32px;display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);">Sin imágenes</div>`;
+
+  // Features chips
+  const chips = [
+    prop.room_amount     ? `<div class="feature-chip">${iconBed()}${prop.room_amount} ambiente${prop.room_amount > 1 ? 's' : ''}</div>` : '',
+    prop.suite_amount    ? `<div class="feature-chip">${iconBed()}${prop.suite_amount} dormitorio${prop.suite_amount > 1 ? 's' : ''}</div>` : '',
+    prop.bathroom_amount ? `<div class="feature-chip">${iconBath()}${prop.bathroom_amount} baño${prop.bathroom_amount > 1 ? 's' : ''}</div>` : '',
+    (prop.roofed_surface && parseFloat(prop.roofed_surface) > 0) ? `<div class="feature-chip">${iconSquare()}${parseFloat(prop.roofed_surface)} m² cubiertos</div>` : '',
+    (prop.total_surface  && parseFloat(prop.total_surface) > 0)  ? `<div class="feature-chip">${iconSquare()}${parseFloat(prop.total_surface)} m² totales</div>` : '',
+    prop.parking_lot_amount > 0 ? `<div class="feature-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>${prop.parking_lot_amount} cochera${prop.parking_lot_amount > 1 ? 's' : ''}</div>` : '',
+    prop.floor ? `<div class="feature-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>Piso ${prop.floor}</div>` : '',
+    prop.age ? `<div class="feature-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>${prop.age} año${prop.age > 1 ? 's' : ''} de antigüedad</div>` : '',
+    prop.disposition ? `<div class="feature-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>${t(prop.disposition)}</div>` : '',
+  ].filter(Boolean).join('');
+
+  // Extra attributes
+  const extras = (prop.extra_attributes || []).filter(e => !e.is_expenditure && e.value && e.value !== '0');
+  const extrasHtml = extras.length ? `
+    <div class="detail-extras" style="margin-top:32px;">
+      <h3 style="margin-bottom:16px;">Características adicionales</h3>
+      <div class="extras-grid">
+        ${extras.map(e => `
+          <div class="extra-item">
+            ${iconCheck()}
+            <span><strong>${e.name}:</strong> ${e.value}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  // Tags (amenities)
+  const tags = prop.tags || [];
+  const tagsHtml = tags.length ? `
+    <div style="margin-top:32px;">
+      <h3 style="margin-bottom:16px;">Servicios y amenities</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        ${tags.map(tag => `<span class="feature-chip">${iconCheck()}${t(tag.name)}</span>`).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  const expenses = prop.expenses && prop.expenses > 0
+    ? `<p class="detail-expenses">+ Expensas: $${Number(prop.expenses).toLocaleString('es-AR')}/mes</p>` : '';
+
+  const waMsg = encodeURIComponent(`Hola Cecilia! Me interesa la propiedad ${prop.reference_code || prop.id}: ${prop.publication_title}. ¿Podría darme más información?`);
+
+  content.innerHTML = `
+    ${galleryHtml}
+    <div class="detail-layout">
+      <div class="detail-main">
+        <p style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-primary);margin-bottom:8px;">
+          ${prop.type ? t(prop.type.name) : ''} · ${opType === 'Sale' ? 'Venta' : opType === 'Rent' ? 'Alquiler' : ''}
+        </p>
+        <h1>${prop.publication_title || prop.address}</h1>
+        <p class="detail-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          ${location}
+          ${prop.real_address && prop.real_address !== location ? ` — ${prop.real_address}` : ''}
+        </p>
+        <div class="detail-features">${chips}</div>
+        ${(prop.description || prop.rich_description) ? `
+          <div class="detail-description">
+            <h3>Descripción</h3>
+            <p>${(prop.rich_description || prop.description || '').replace(/<[^>]+>/g, '').trim()}</p>
+          </div>
+        ` : ''}
+        ${extrasHtml}
+        ${tagsHtml}
+        ${prop.videos && prop.videos.length > 0 ? `
+          <div style="margin-top:32px;">
+            <h3 style="margin-bottom:16px;">Video</h3>
+            <a href="${prop.public_url}" target="_blank" rel="noopener" class="btn btn-outline">Ver video de la propiedad</a>
+          </div>
+        ` : ''}
+      </div>
+
+      <div class="detail-sidebar">
+        <div class="detail-price-card">
+          <p class="detail-price-label">${opType === 'Rent' ? 'Alquiler mensual' : 'Precio de venta'}</p>
+          <p class="detail-price">${price}</p>
+          ${expenses}
+          <div class="detail-sidebar-contact">
+            <a href="https://wa.me/541153473533/?text=${waMsg}" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.133.559 4.133 1.535 5.867L.057 23.776a.5.5 0 0 0 .614.64l6.102-1.597A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a10 10 0 0 1-5.166-1.4l-.37-.217-3.828 1.003.964-3.717-.24-.386A10 10 0 1 1 12 22z"/></svg>
+              Consultar por WhatsApp
+            </a>
+            <a href="tel:+541153473533" class="btn btn-outline btn-full">
+              Llamar: 11 5347-3533
+            </a>
+            <a href="index.html#contacto" class="btn btn-outline btn-sm btn-full">Formulario de contacto</a>
+          </div>
+          <p class="detail-ref">Ref: ${prop.reference_code || prop.id}</p>
+        </div>
+
+        ${prop.producer ? `
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-sm);">
+            <p style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:10px;">Agente</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              ${prop.producer.picture ? `<img src="${prop.producer.picture}" alt="${prop.producer.name}" style="width:44px;height:44px;border-radius:50%;object-fit:cover;"/>` : ''}
+              <div>
+                <p style="font-weight:600;font-size:0.9rem;">${prop.producer.name}</p>
+                ${prop.producer.cellphone ? `<p style="font-size:0.8rem;color:var(--color-text-muted);">+${prop.producer.cellphone}</p>` : ''}
+              </div>
+            </div>
+          </div>
+        ` : ''}
+      </div>
+    </div>
+  `;
+
+  // Init lightbox
+  initLightbox(photos.map(p => p.image));
+}
+
+// Load related properties (same operation type)
+async function loadRelated(prop) {
+  try {
+    const data = await TOKKO.getProperties({ limit: 20 });
+    const opType = TOKKO.getOperationType(prop);
+    const related = data.objects
+      .filter(p => p.id !== prop.id && TOKKO.getOperationType(p) === opType)
+      .slice(0, 3);
+    if (related.length === 0) return;
+    document.getElementById('relatedSection').style.display = 'block';
+    document.getElementById('relatedGrid').innerHTML = related.map(buildPropertyCard).join('');
+  } catch {}
+}
+
+// Lightbox logic
+let lightboxPhotos = [];
+let lightboxIdx    = 0;
+
+function initLightbox(photos) {
+  lightboxPhotos = photos;
+  document.getElementById('lightboxClose').onclick = () => document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightboxPrev').onclick  = () => showLightbox(lightboxIdx - 1);
+  document.getElementById('lightboxNext').onclick  = () => showLightbox(lightboxIdx + 1);
+  document.addEventListener('keydown', e => {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowLeft')  showLightbox(lightboxIdx - 1);
+    if (e.key === 'ArrowRight') showLightbox(lightboxIdx + 1);
+  });
+}
+
+function openLightbox(idx) {
+  document.getElementById('lightbox').classList.add('open');
+  showLightbox(idx);
+}
+
+function showLightbox(idx) {
+  if (lightboxPhotos.length === 0) return;
+  lightboxIdx = (idx + lightboxPhotos.length) % lightboxPhotos.length;
+  document.getElementById('lightboxImg').src = lightboxPhotos[lightboxIdx];
+  document.getElementById('lightboxCounter').textContent = `${lightboxIdx + 1} / ${lightboxPhotos.length}`;
+}
+
+// Detail page carousel
+function detailCarouselMove(dir) {
+  const c = document.getElementById('detailCarousel');
+  if (!c) return;
+  const total = c.querySelectorAll('.detail-carousel-slide').length;
+  let idx = parseInt(c.dataset.index || 0) + dir;
+  if (idx < 0) idx = total - 1;
+  if (idx >= total) idx = 0;
+  detailCarouselGoTo(idx);
+}
+
+function detailCarouselGoTo(idx) {
+  const c = document.getElementById('detailCarousel');
+  const track = document.getElementById('detailCarouselTrack');
+  if (!c || !track) return;
+  c.dataset.index = idx;
+  track.style.transform = `translateX(-${idx * 100}%)`;
+  const counter = document.getElementById('dcCounter');
+  if (counter) counter.textContent = idx + 1;
+  c.querySelectorAll('.detail-thumb').forEach((t, i) => t.classList.toggle('active', i === idx));
+  const active = c.querySelectorAll('.detail-thumb')[idx];
+  if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+
+// Touch swipe for detail carousel
+let _dcSwipeX = 0;
+document.addEventListener('touchstart', e => {
+  if (e.target.closest('#detailCarousel')) _dcSwipeX = e.changedTouches[0].clientX;
+}, { passive: true });
+document.addEventListener('touchend', e => {
+  if (!e.target.closest('#detailCarousel')) return;
+  const dx = e.changedTouches[0].clientX - _dcSwipeX;
+  if (Math.abs(dx) > 40) detailCarouselMove(dx > 0 ? -1 : 1);
+});
+</script>
+</body>
+</html>

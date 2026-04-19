@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -o \"agency-agents-main.zip\" -d \"agency-agents-main\")",
+      "Bash(cp -r \"C:/Users/magal/Downloads/agency-agents-main/agency-agents-main/academic/\"* \"C:/Users/magal/.claude/agents/\")",
+      "Bash(cp -r \"C:/Users/magal/Downloads/agency-agents-main/agency-agents-main/design/\"* \"C:/Users/magal/.claude/agents/\")",
+      "Bash(cp -r \"C:/Users/magal/Downloads/agency-agents-main/agency-agents-main/engineering/\"* \"C:/Users/magal/.claude/agents/\")",
+      "Bash(unzip -l \"C:/Users/magal/Downloads/agency-agents-main \\(1\\).zip\")",
+      "Bash(unzip -o \"C:/Users/magal/Downloads/agency-agents-main \\(1\\).zip\" -d \"C:/Users/magal/Downloads/agency-agents-extra\")",
+      "Bash(cp 'C:/Users/magal/Downloads/agency-agents-extra/agency-agents-main/__TRACKED_VAR__/*.md' C:/Users/magal/.claude/agents/)",
+      "Bash(cp 'C:/Users/magal/Downloads/agency-agents-extra/agency-agents-main/engineering/*.md' C:/Users/magal/.claude/agents/)",
+      "Bash(cp 'C:/Users/magal/Downloads/agency-agents-extra/agency-agents-main/game-development/*.md' C:/Users/magal/.claude/agents/)",
+      "Bash(cp 'C:/Users/magal/Downloads/agency-agents-extra/agency-agents-main/game-development/blender/*.md' C:/Users/magal/.claude/agents/)",
+      "Bash(cp 'C:/Users/magal/Downloads/agency-agents-extra/agency-agents-main/game-development/godot/*.md' C:/Users/magal/.claude/agents/)",
+      "Bash(pandoc --version)",
+      "Bash(python -c \"import docx; print\\('ok'\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python generate_docx.py)",
+      "WebFetch(domain:cquibelpropiedades.com.ar)"
+    ]
+  }
+}
