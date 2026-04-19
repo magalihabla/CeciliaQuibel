@@ -1516,20 +1516,6 @@ p  { max-width: 68ch; }
   font-size: 0.88rem;
   max-width: 420px;
 }
-.ig-embed-posts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
-}
-.ig-embed-post {
-  display: flex;
-  justify-content: center;
-}
-.ig-embed-post .instagram-media {
-  border-radius: 12px !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25) !important;
-}
 
 /* --- Nosotros Page --------------------------------------- */
 .nosotros-hero-content {
@@ -1625,8 +1611,6 @@ p  { max-width: 68ch; }
 .nosotros-cta p  { color: rgba(255,255,255,0.65); margin: 0 auto 28px; max-width: 480px; }
 
 @media (max-width: 768px) {
-  .ig-embed-posts { grid-template-columns: 1fr; }
-  .ig-embed-posts .ig-embed-post:nth-child(n+2) { display: none; }
   .ig-footer { flex-direction: column; align-items: flex-start; }
   .nosotros-bio { grid-template-columns: 1fr; gap: 40px; }
   .equipo-grid { grid-template-columns: 1fr; gap: 40px; }
